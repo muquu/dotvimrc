@@ -4,7 +4,7 @@ Clone repository
 --------------------
 ::
 
-  $ git clone https://bitbucket.org/muquu/dotfiles.git ~/dotfiles
+  $ git clone https://github.com/muquu/dotfiles.git ~/dotfiles
 
 Create symbolic link
 -------------------------
