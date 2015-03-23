@@ -13,8 +13,8 @@ set ruler
 "let g:Powerline_symbols = 'fancy'
 " source ~/dotfiles/.vimrc.statusline.powerline
 
-"let g:airline_powerlilne_fonts = 1
-let g:airline_theme = "wombat"
+" let g:airline_powerlilne_fonts = 0
+" let g:airline_theme = "wombat"
 
 "自動的に QuickFix リストを表示する
 autocmd QuickfixCmdPost make,grep,grepadd,vimgrep,vimgrepadd cwin
