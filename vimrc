@@ -30,7 +30,7 @@ source ~/dotvimrc/vim/misc.vim
 source ~/dotvimrc/vim/im_setting.vim
 " GVim設定
 if has('gui_running')
-  source ~/dotvimrc/gvimrc.vim
+  source ~/dotvimrc/gvimrc
 endif
 
 " プラグイン設定

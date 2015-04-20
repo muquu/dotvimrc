@@ -4,3 +4,6 @@
 source ~/dotvimrc/plugin/unite.vim
 " vim-airline
 source ~/dotvimrc/plugin/airline.vim
+" ctrlp.vim
+source ~/dotvimrc/plugin/ctrlp.vim
+

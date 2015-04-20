@@ -7,7 +7,7 @@ set laststatus=2 " 常にステータスラインを表示
 set ruler
 
 " lightline.vim の設定
-"source ~/dotvimrc/.vimrc.statusline.lightline
+source ~/dotvimrc/vim/statusline-lightline.vim
 
 " vim-powerlineの設定
 "let g:Powerline_symbols = 'fancy'
