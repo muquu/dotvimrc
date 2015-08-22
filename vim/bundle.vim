@@ -18,9 +18,11 @@ Plugin 'gmarik/Vundle.vim'
   " vimからGit操作する
   Plugin 'tpope/vim-fugitive'
 
+  " surround
+  Plugin 'tpope/vim-surround'
+
   " vim上でgit diff表示
   "NeoBundle 'airblade/vim-gitgutter'
-
 
 " }}}
 
