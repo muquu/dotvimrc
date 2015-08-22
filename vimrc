@@ -27,7 +27,9 @@ source ~/dotvimrc/vim/misc.vim
 " プラグインに依存するアレ
 "source ~/dotvimrc/vim/plugins_setting.vim
 " fcitx インプットメソッドの設定
-source ~/dotvimrc/vim/im_setting.vim
+if has('unix')
+  source ~/dotvimrc/vim/im_setting.vim
+endif
 " GVim設定
 if has('gui_running')
   source ~/dotvimrc/gvimrc
