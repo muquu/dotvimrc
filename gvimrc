@@ -14,6 +14,8 @@ set novb
 colorscheme molokai
 
 if has('win32')
+  set ffs=dos
+  set nolist
   "set guifont=Inconsolata:h12:cANSI
   set guifont=MyricaM_M:h12:cSHIFTJIS
   source $VIMRUNTIME/delmenu.vim
