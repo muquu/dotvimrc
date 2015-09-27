@@ -1,58 +1,130 @@
-" vunlde.vimで管理してるpluginを読み込む
+" neobundle.vimで管理してるpluginを読み込む
 
-set nocompatible
-filetype off
+" Initialize {{{
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
 
-Plugin 'gmarik/Vundle.vim'
+if has('vim_starting')
+ if &compatible
+   set nocompatible               " Be iMproved
+ endif
 
+ " Required:
+ set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" }}}
+
+" Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+" ------------------------------------------------------------------------------
 
 " Edit {{{
 
   "コメント
-  Plugin 'tomtom/tcomment_vim'
-
+  NeoBundle 'tomtom/tcomment_vim'
 
   " vimからGit操作する
-  Plugin 'tpope/vim-fugitive'
+  NeoBundle 'tpope/vim-fugitive'
 
   " surround
-  Plugin 'tpope/vim-surround'
+  NeoBundle 'tpope/vim-surround'
 
   " vim上でgit diff表示
-  "NeoBundle 'airblade/vim-gitgutter'
+  NeoBundle 'airblade/vim-gitgutter'
+
+  " 補完
+  NeoBundleLazy 'Shougo/neocomplete.vim'
+
+  " スニペット
+  NeoBundleLazy 'Shougo/neosnippet.vim'
+  NeoBundleLazy 'Shougo/neosnippet-snippets'
+
+  " ヘッダファイルとソースファイルを切り替える
+  NeoBundle 'kana/vim-altr'
 
 " }}}
 
-" Filer and Unite {{{
-
-  " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
-  Plugin 'ctrlpvim/ctrlp.vim'
-
-  " Dirvish is to dired as ed is to vi
-  Plugin 'justinmk/vim-dirvish'
-
-  " バッファ管理
-  "Plugin 'fholgado/minibufexpl.vim'
+" Filer, Utility and Unite {{{
 
   " Unite
-  Plugin 'Shougo/unite.vim'
+  NeoBundle 'Shougo/unite.vim'
+  NeoBundle 'Shougo/unite-outline'
+
+  " Powerfull shell implemented by vim
+  NeoBundle 'Shougo/vimshell.vim'
+
+  " Powerful file explorer implemented by Vim script
+  "NeoBundle 'Shougo/vimfiler.vim'
+
+  " MRU plugin includes unite.vim MRU sources
+  "NeoBundle 'Shougo/neomru.vim'
+
+  " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
+  NeoBundle 'ctrlpvim/ctrlp.vim'
+
+  " Dirvish is to dired as ed is to vi
+  NeoBundle 'justinmk/vim-dirvish'
+
+  " vimproc
+  NeoBundle 'Shougo/vimproc.vim', {
+  \ 'build' : {
+  \     'windows' : 'tools\\update-dll-mingw',
+  \     'cygwin' : 'make -f make_cygwin.mak',
+  \     'mac' : 'make -f make_mac.mak',
+  \     'linux' : 'make',
+  \     'unix' : 'gmake',
+  \   },
+  \ }
+
+  " quickrun
+  NeoBundle 'thinca/vim-quickrun'
+
+  " 汎用的なquickrun-hook
+  NeoBundle 'osyo-manga/shabadou.vim'
+
+  " Async syntax check plugin.
+  NeoBundle 'osyo-manga/vim-watchdogs'
 
 " }}}
 
 " Appearance {{{
 
   " カラースキーマ
-  Plugin 'muquu/molokai'
+  NeoBundle 'muquu/molokai'
+  NeoBundle 'altercation/vim-colors-solarized'
+  NeoBundle 'sheerun/vim-wombat-scheme'
 
   " ステータスラインをカッコよくする
-  "Plugin 'Lokaltog/vim-powerline'
-  "Plugin 'itchyny/lightline.vim'
-  Plugin 'bling/vim-airline'
+  NeoBundle 'itchyny/lightline.vim'
+  "NeoBundle 'bling/vim-airline'
+
+  " Syntax checking
+  "NeoBundleLazy 'scrooloose/syntastic'
 
 " }}}
 
-call vundle#end()
+" ------------------------------------------------------------------------------
+" Bundles end
+
+" Finalize {{{
+
+call neobundle#end()
+
+" Required:
 filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+" }}}

@@ -4,23 +4,42 @@ set t_Co=256
 "" 全角記号
 set ambiwidth=double
 "" フォント""
-set guifont=Ricty\ 12
+"set guifont=Ricty\ 12
 "" カーソル点滅
 set guicursor=a:blinkon0
 "" ビープ音(消す)
 set vb t_vb=
-set novb
-"" カラーテーマ
-colorscheme molokai
+"set novb
+"" ツールバー非表示
+set guioptions-=T
+"" 左右のスクロールバー非表示
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
+"" 水平スクロールバー非表示
+set guioptions-=b
+"" メニューバー非表示
+set guioptions-=m
+"" カラースキーム
+"" wombat
+"colorscheme wombat
+"" molokai
+"colorscheme molokai
+"" solarized
+set background=dark
+colorscheme solarized
+let g:solarized_italic=0
 
 if has('win32')
   set ffs=dos
   "set nolist
-  "set guifont=Inconsolata:h12:cANSI
-  set guifont=MyricaM_M:h12:cSHIFTJIS
+  set guifont=Ubuntu_Mono_for_Powerline:h12:cANSI
+  set guifontwide=MeiryoKe_Console:h12:cANSI
   source $VIMRUNTIME/delmenu.vim
   set langmenu=ja_jp.utf-8
   source $VIMRUNTIME/menu.vim
+  let g:airline_powerline_fonts = 1
 endif
 
 

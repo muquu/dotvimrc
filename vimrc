@@ -9,7 +9,7 @@ source ~/dotvimrc/vim/indent.vim
 " 表示関連
 source ~/dotvimrc/vim/apperance.vim
 " " 補完関連
-"source ~/dotvimrc/vim/completion.vim
+source ~/dotvimrc/vim/completion.vim
 " Tags関連
 source ~/dotvimrc/vim/tags.vim
 " 検索関連
@@ -22,10 +22,6 @@ source ~/dotvimrc/vim/colors.vim
 source ~/dotvimrc/vim/editing.vim
 " エンコーディング関連
 source ~/dotvimrc/vim/encoding.vim
-" その他
-source ~/dotvimrc/vim/misc.vim
-" プラグインに依存するアレ
-"source ~/dotvimrc/vim/plugins_setting.vim
 " fcitx インプットメソッドの設定
 if has('unix')
   source ~/dotvimrc/vim/im_setting.vim
