@@ -28,8 +28,13 @@ set guioptions-=m
 "colorscheme molokai
 "" solarized
 set background=dark
-colorscheme solarized
 let g:solarized_italic=0
+colorscheme solarized
+
+if has('unix')
+  set novb
+  set guifont=Ricty\ for\ Powerline\ 12
+endif
 
 if has('win32')
   set ffs=dos
