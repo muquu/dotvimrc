@@ -43,14 +43,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'airblade/vim-gitgutter'
 
   " 補完
-  NeoBundleLazy 'Shougo/neocomplete.vim'
+  NeoBundle 'Shougo/neocomplete.vim'
 
   " スニペット
-  NeoBundleLazy 'Shougo/neosnippet.vim'
-  NeoBundleLazy 'Shougo/neosnippet-snippets'
-
-  " ヘッダファイルとソースファイルを切り替える
-  NeoBundle 'kana/vim-altr'
+  NeoBundle 'Shougo/neosnippet.vim'
+  NeoBundle 'Shougo/neosnippet-snippets'
 
 " }}}
 
@@ -64,16 +61,16 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'Shougo/vimshell.vim'
 
   " Powerful file explorer implemented by Vim script
-  "NeoBundle 'Shougo/vimfiler.vim'
+  NeoBundle 'Shougo/vimfiler.vim'
 
   " MRU plugin includes unite.vim MRU sources
-  "NeoBundle 'Shougo/neomru.vim'
+  NeoBundle 'Shougo/neomru.vim'
 
   " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
   NeoBundle 'ctrlpvim/ctrlp.vim'
 
   " Dirvish is to dired as ed is to vi
-  NeoBundle 'justinmk/vim-dirvish'
+  "NeoBundle 'justinmk/vim-dirvish'
 
   " vimproc
   NeoBundle 'Shougo/vimproc.vim', {
@@ -95,6 +92,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " Async syntax check plugin.
   NeoBundle 'osyo-manga/vim-watchdogs'
 
+  " Syntax checking
+  NeoBundle 'scrooloose/syntastic'
+
+  " ヘッダファイルとソースファイルを切り替える
+  NeoBundle 'kana/vim-altr'
+
 " }}}
 
 " Appearance {{{
@@ -107,9 +110,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " ステータスラインをカッコよくする
   NeoBundle 'itchyny/lightline.vim'
   "NeoBundle 'bling/vim-airline'
-
-  " Syntax checking
-  "NeoBundleLazy 'scrooloose/syntastic'
 
 " }}}
 

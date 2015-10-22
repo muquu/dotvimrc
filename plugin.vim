@@ -6,5 +6,11 @@ source ~/dotvimrc/plugin/unite.vim
 source ~/dotvimrc/plugin/ctrlp.vim
 " lightline.vim
 source ~/dotvimrc/plugin/lightline.vim
-" vim-dirvish
-source ~/dotvimrc/plugin/vim-dirvish.vim
+" neocomplete.vim
+source ~/dotvimrc/plugin/neocomplete.vim
+" vim-altr
+source ~/dotvimrc/plugin/vim-altr.vim
+" syntastic
+source ~/dotvimrc/plugin/syntastic.vim
+" vimfiler
+source ~/dotvimrc/plugin/vimfiler.vim
