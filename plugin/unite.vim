@@ -24,7 +24,11 @@ nnoremap <silent> [unite]d     :<C-u>UniteWithBufferDir -auto-preview file<CR>
 nnoremap <silent> <Space>b     :<C-u>UniteBookmarkAdd<CR>
 nnoremap <silent> [unite]<C-b> :<C-u>Unite -auto-preview bookmark -buffer-name=bookmark<CR>
 " grep
-nnoremap <silent> [unite]gr    :<C-u>Unite -auto-preview grep:<CR>
+nnoremap <silent> [unite]gr    :<C-u>Unite -auto-preview grep: -buffer-name=search-buffer<CR>
+" カーソル位置の単語をgrep検索
+nnoremap <silent> [unite]gw    :<C-u>Unite -auto-preview grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+" grep検索を再開する
+nnoremap <silent> [unite]gt    :<C-u>UniteResume -auto-preview search-buffer<CR>
 
 " from basyura/unite-rails
 nnoremap <silent> [unite]rm    :<C-u>Unite -auto-preview rails/model<CR>
@@ -34,3 +38,16 @@ nnoremap <silent> [unite]rl    :<C-u>Unite -auto-preview rails/lib<CR>
 nnoremap <silent> [unite]rj    :<C-u>Unite -auto-preview rails/javascript<CR>
 nnoremap <silent> [unite]rs    :<C-u>Unite -auto-preview rails/spec<CR>
 
+
+" unite grep に ag(The silver searcher)を使う
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
+" デフォルトでは ignorecase と smartcase を使う
+call unite#custom#profile('default', 'context.ignorecase', 1)
+call unite#custom#profile('default', 'context.smartcase', 1)
+" ファイル選択時は smartcase を使わない
+call unite#custom#profile('files', 'context.smartcase', 0)

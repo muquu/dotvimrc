@@ -37,10 +37,17 @@ if has('unix')
 endif
 
 if has('win32')
-  set ffs=dos
+  "set ffs=dos
   "set nolist
-  set guifont=Ubuntu_Mono_for_Powerline:h12:cANSI
-  set guifontwide=MeiryoKe_Console:h12:cANSI
+  " アンチエイリアスフォント
+  "set guifont=Ubuntu_Mono_for_Powerline:h12:cANSI
+  "set guifont=Anonymous_Pro_for_Powerline:h11:cANSI
+  "set guifont=DejaVu_Sans_Mono_for_Powerline:h10:cANSI
+  "set guifontwide=MeiryoKe_Console:h12:cANSI
+  " ビットマップフォント
+  set guifont=ProggyClean:h8:cANSI
+  "set guifontwide=ＭＳ_ゴシック:h10:cANSI
+  set guifontwide=ばぐまるゴシック:h9:cANSI
   source $VIMRUNTIME/delmenu.vim
   set langmenu=ja_jp.utf-8
   source $VIMRUNTIME/menu.vim
@@ -68,7 +75,7 @@ function! GuiTabLabel()
     let l:label .= '[' . l:wincount . ']'
   endif
 
-  " このタブページに変更のあるバッファがるときには '[+]' を追加します(デフォルトで一応あるので)
+  " このタブページに変更のあるバッファがあるときには '[+]' を追加します(デフォルトで一応あるので)
   for bufnr in l:bufnrlist
     if getbufvar(bufnr, "&modified")
       let l:label .= '[+]'

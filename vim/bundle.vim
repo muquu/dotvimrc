@@ -87,13 +87,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'thinca/vim-quickrun'
 
   " 汎用的なquickrun-hook
-  NeoBundle 'osyo-manga/shabadou.vim'
+  "NeoBundle 'osyo-manga/shabadou.vim'
 
   " Async syntax check plugin.
-  NeoBundle 'osyo-manga/vim-watchdogs'
+  "NeoBundle 'osyo-manga/vim-watchdogs'
 
   " Syntax checking
-  NeoBundle 'scrooloose/syntastic'
+  "NeoBundle 'scrooloose/syntastic'
 
   " ヘッダファイルとソースファイルを切り替える
   NeoBundle 'kana/vim-altr'
@@ -108,8 +108,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'sheerun/vim-wombat-scheme'
 
   " ステータスラインをカッコよくする
-  NeoBundle 'itchyny/lightline.vim'
-  "NeoBundle 'bling/vim-airline'
+  "NeoBundle 'itchyny/lightline.vim'
+  NeoBundle 'bling/vim-airline'
 
 " }}}
 

@@ -33,3 +33,8 @@ endif
 
 " プラグイン設定
 source ~/dotvimrc/plugin.vim
+
+" ローカル設定
+if filereadable(expand('~/.vimrc.local'))
+  source ~/.vimrc.local
+endif
