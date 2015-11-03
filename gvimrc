@@ -46,8 +46,7 @@ if has('win32')
   "set guifontwide=MeiryoKe_Console:h12:cANSI
   " ビットマップフォント
   set guifont=ProggyClean:h8:cANSI
-  "set guifontwide=ＭＳ_ゴシック:h10:cANSI
-  set guifontwide=ばぐまるゴシック:h9:cANSI
+  set guifontwide=ＭＳ_ゴシック:h10:cANSI
   source $VIMRUNTIME/delmenu.vim
   set langmenu=ja_jp.utf-8
   source $VIMRUNTIME/menu.vim
