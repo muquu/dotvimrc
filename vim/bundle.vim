@@ -110,6 +110,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " ステータスラインをカッコよくする
   "NeoBundle 'itchyny/lightline.vim'
   NeoBundle 'bling/vim-airline'
+  NeoBundle 'vim-airline/vim-airline-themes'
 
 " }}}
 
